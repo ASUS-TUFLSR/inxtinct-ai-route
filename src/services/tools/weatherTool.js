@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const getWeather = async (location) => {
-// sanitize location
 const q = encodeURIComponent(location);
 const apiKey = process.env.OPENWEATHER_API_KEY;
 if (!apiKey) throw new Error('Missing OPENWEATHER_API_KEY');
@@ -17,7 +16,6 @@ const city = data.name || location;
 return `The weather in ${city} is ${temp}°C with ${desc}.`;
 } catch (err) {
 console.error('Weather API error:', err?.response?.data || err.message);
-// fallback english message
 return `I couldn't fetch live weather for ${location} right now.`;
 }
 }

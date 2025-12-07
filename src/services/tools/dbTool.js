@@ -1,6 +1,5 @@
 import Employee from "../../models/Employee.js";
 
-// Very small, strict mapping from LLM-provided filter to mongoose filters
 const transformFilter = (filter) => {
   const mongo = {};
 
@@ -9,11 +8,11 @@ const transformFilter = (filter) => {
     if (filter.salaryOperator === 'gt') {
       mongo.salary = { $gt: filter.minSalary };
     } else {
-      mongo.salary = { $gte: filter.minSalary };  // Default to >=
+      mongo.salary = { $gte: filter.minSalary };  
     }
   }
   if (filter.joinedLastMonth) {
-    // ... (existing code)
+    
   }
   if (filter.name) mongo.name = filter.name;
   if (filter.city) mongo.city = filter.city;
@@ -22,7 +21,7 @@ const transformFilter = (filter) => {
 };
 
 export const handle = async (collection, operation, filter) => {
-// We support only the `employees` collection in this demo
+
 if (!collection || collection !== 'employees') {
 return 'I can only query the employees collection in this demo.';
 }

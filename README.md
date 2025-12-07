@@ -48,7 +48,7 @@ Example:
 
 # 1. Clone & enter folder
 
-git clone
+git clone https://github.com/ASUS-TUFLSR/inxtinct-ai-route
 cd <project-folder>
 
 # 2. Install dependencies
