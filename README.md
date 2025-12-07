@@ -101,8 +101,8 @@ Server is now live at http://localhost:5000/api/ai
 
 # Tech Stack
 
-Node.js + Express
-MongoDB + Mongoose
-Groq (ultra-fast LLM inference)
-OpenWeatherMap API
-Pure JSON routing (no LangChain needed)
+- Node.js + Express
+- MongoDB + Mongoose
+- Groq (ultra-fast LLM inference)
+- OpenWeatherMap API
+- Pure JSON routing (no LangChain needed)
